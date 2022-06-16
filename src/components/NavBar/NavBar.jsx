@@ -5,12 +5,12 @@ import Buttons from '../Buttons/Buttons'
 
 const NavBar = (props) => {
 
-  const {} = props
+  const {handleReset} = props
 
   return (
     <div className='nav-bar'>
         <h1 className='nav-bar__heading' >My Todos</h1>
-        <Buttons buttonText={'reset'}/>
+        <Buttons onClick={handleReset} buttonText={'reset'}/>
     </div>
   )
 }
