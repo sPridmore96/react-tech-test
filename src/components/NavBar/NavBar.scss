@@ -1,0 +1,11 @@
+@use "../../assets/sass/variables" as *;
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    border: solid black 2px;
+
+    &__heading{
+        color: $prim-color;
+    }
+}

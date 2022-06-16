@@ -1,0 +1,13 @@
+.userToDo{
+    border: solid black 2px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.3rem;
+    width: 20rem;
+
+    &__left{
+        display: flex;
+        width: 5rem;
+    }
+}

@@ -1,3 +1,6 @@
+@use "./assets/sass/reset" as *;
+@use "./assets/sass/variables" as *;
+
 .App {
   text-align: center;
 }

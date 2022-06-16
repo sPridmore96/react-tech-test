@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: solid black 2px;
+    align-items: center;
+    &__form{
+        
+        display: flex;
+    }
+}
