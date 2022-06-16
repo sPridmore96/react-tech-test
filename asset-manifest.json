@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spridmore96/react-tech-test/static/css/main.d41a88c6.css",
+    "main.js": "/spridmore96/react-tech-test/static/js/main.4eb8b0d1.js",
+    "static/js/787.7f62d34e.chunk.js": "/spridmore96/react-tech-test/static/js/787.7f62d34e.chunk.js",
+    "index.html": "/spridmore96/react-tech-test/index.html",
+    "main.d41a88c6.css.map": "/spridmore96/react-tech-test/static/css/main.d41a88c6.css.map",
+    "main.4eb8b0d1.js.map": "/spridmore96/react-tech-test/static/js/main.4eb8b0d1.js.map",
+    "787.7f62d34e.chunk.js.map": "/spridmore96/react-tech-test/static/js/787.7f62d34e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d41a88c6.css",
+    "static/js/main.4eb8b0d1.js"
+  ]
+}
