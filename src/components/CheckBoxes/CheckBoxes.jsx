@@ -1,10 +1,13 @@
 import React from 'react'
 import "./CheckBoxes.scss"
 
-const CheckBoxes = () => {
+const CheckBoxes = (props) => {
+
+  const {handleCheckBox} = props
+
   return (
     <div>
-        <input type="checkbox" />
+        <input onClick={handleCheckBox} type="checkbox" />
     </div>
   )
 }

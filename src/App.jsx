@@ -10,6 +10,7 @@ function App() {
 
 const [inputValue, setInputValue] = useState('')
 const [usersToDo, setUsersToDo] = useState([])
+const [checked, setChecked] = useState()
 
 const usersToDoArr = []
 
@@ -29,9 +30,23 @@ const resetInput = (event) => {
 const handleSubmit = (event) => {
   event.preventDefault();
   let currentInput = inputValue
+  if (inputValue === '') {
+    alert('Please Enter A ToDo')
+  }
   usersToDoArr.push(currentInput)
   setUsersToDo(usersToDoArr => [...usersToDoArr, currentInput])
 }
+
+const handleCheckBox = (event) => {
+  let checked = event.target.checked;
+  setChecked(checked)
+
+  if (checked) {
+
+  }
+}
+
+
 
 
 const handleDelete = (event) => {
@@ -46,7 +61,7 @@ const handleDelete = (event) => {
   return (
     <div className="App">
       <NavBar handleReset={handleReset}/>
-      <Main  resetInput={resetInput} handleDelete={handleDelete} usersToDo={usersToDo} handleSubmit={handleSubmit} handleInput={handleInput}/>
+      <Main handleCheckBox={handleCheckBox} resetInput={resetInput} handleDelete={handleDelete} usersToDo={usersToDo} handleSubmit={handleSubmit} handleInput={handleInput}/>
     </div>
   );
 }

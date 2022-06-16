@@ -6,7 +6,7 @@ import Buttons from '../../components/Buttons/Buttons';
 
 const Main = (props) => {
 
-  const { handleInput, handleSubmit, usersToDo,handleDelete, resetInput, } = props
+  const {handleCheckBox, handleInput, handleSubmit, usersToDo,handleDelete, resetInput, } = props
 
 
   return (
@@ -15,7 +15,7 @@ const Main = (props) => {
         <Inputs name={'userInput'} placeHolder={'Add your task here...'} handleInput={handleInput} />
         <Buttons onClick={resetInput} buttonText={'Add'}/>
       </form>
-      <UserToDo handleDelete={handleDelete} usersToDo={usersToDo} />
+      <UserToDo handleCheckBox={handleCheckBox} handleDelete={handleDelete} usersToDo={usersToDo} />
     </div>
   );
 };

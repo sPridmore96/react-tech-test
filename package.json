@@ -2,7 +2,7 @@
   "name": "react-tech-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "spridmore96/react-tech-test",
+  "homepage": "https://spridmore96.github.io/react-tech-test/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

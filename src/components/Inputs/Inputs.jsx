@@ -6,9 +6,9 @@ const Inputs = (props) => {
   const {handleInput, name, placeHolder} = props
 
   return (
-    <div>
+    <div className='inputs'>
         <label htmlFor=""></label>
-        <input name={name} placeholder={placeHolder} onInput={handleInput} type="text" />
+        <input className='inputs__input' name={name} placeholder={placeHolder} onInput={handleInput} type="text" />
     </div>
   )
 }
