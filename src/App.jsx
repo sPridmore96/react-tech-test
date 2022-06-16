@@ -18,25 +18,35 @@ const handleInput = (event) => {
   setInputValue(event.target.value)
 }
 
+const handleReset = (event) => {
+  setUsersToDo([])
+}
+
+const resetInput = (event) => {
+  // setCurrentInputVal(event.nativeEvent.path[1][0].value) 
+}
+
 const handleSubmit = (event) => {
   event.preventDefault();
   let currentInput = inputValue
   usersToDoArr.push(currentInput)
-  console.log(usersToDoArr);
   setUsersToDo(usersToDoArr => [...usersToDoArr, currentInput])
 }
 
 
 const handleDelete = (event) => {
-  console.log(event.target);
-  const foundElement =event.nativeEvent.path[1].key;
-  console.log(foundElement);
+  console.log(event);
+  const foundElement = event.target.parentNode.__reactFiber$2vqh0osxwot.alternate.key;
+  const copyUserToDo = usersToDo
+  copyUserToDo.splice(foundElement, 1)
+  console.log(copyUserToDo);
+  setUsersToDo()
 }
 
   return (
     <div className="App">
-      <NavBar/>
-      <Main handleDelete={handleDelete} usersToDo={usersToDo} handleSubmit={handleSubmit} handleInput={handleInput}/>
+      <NavBar handleReset={handleReset}/>
+      <Main  resetInput={resetInput} handleDelete={handleDelete} usersToDo={usersToDo} handleSubmit={handleSubmit} handleInput={handleInput}/>
     </div>
   );
 }
