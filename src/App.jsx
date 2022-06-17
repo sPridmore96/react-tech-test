@@ -26,7 +26,6 @@ function App() {
     if (inputValue === '') {
       return alert('Please Enter A ToDo');
     } else {
-      usersToDoArr.push(currentInput);
       setUsersToDo((usersToDoArr) => [...usersToDoArr, currentInput]);
     }
     event.target[0].value = ''
@@ -35,20 +34,25 @@ function App() {
   const handleCheckBox = (event) => {
     let checked = event.target.checked;
     setChecked(checked);
+    const textClass = event.target.parentElement.nextSibling.classList
+    console.log(textClass);
+    // console.log(checked);
+    // console.log(event);
 
     if (checked) {
+      textClass.add("line")
+    } else {
+      textClass.remove("line")
     }
   };
 
   const handleDelete = (event) => {
-    const foundElement = event.target.parentElement.parentElement
-    const foundElementValue = event.target.parentElement.parentElement.children[0].children[1].innerHTML;
-    const copyUserToDo = usersToDo;
-
-     copyUserToDo.splice(foundElementValue, 1);
+    const foundElement = event.target.parentElement.parentElement.id
+    const copyUserToDo = [...usersToDo];
+     copyUserToDo.splice(foundElement, 1);
     setUsersToDo(copyUserToDo);
-    foundElement.remove()
   };
+
   return (
     <div className="App">
       <NavBar handleReset={handleReset} />

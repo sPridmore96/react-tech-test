@@ -8,7 +8,7 @@ const UserToDo = (props) => {
 
   const todoJSX = usersToDo.map((todo, index) => {
     return (
-      <div key={index} className='userToDo'>
+      <div id={index} key={index} className='userToDo'>
         <div className='userToDo__left'>
         <CheckBoxes handleCheckBox={handleCheckBox} />
         <p>{todo}</p>
